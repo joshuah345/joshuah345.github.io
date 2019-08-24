@@ -1,0 +1,11 @@
+{
+    "name": "Superuser's Repo",
+    "description": "i cant make tweaks, themes and widgets for now",
+    "tint": "#7e5828",
+    "cname": "superuser.ml",
+    "maintainer": {
+        "name": "joshuah345",
+        "email": "joshuah345@gmail.com"
+    },
+    "automatic_git": "true"
+}
