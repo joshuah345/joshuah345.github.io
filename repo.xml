@@ -1,0 +1,19 @@
+<repo>
+	<footerlinks>
+		<link>
+			<name>Follow me on Twitter</name>
+			<url>https://twitter.com/Zenith_Superusr</url>
+			<iconclass>fa fa-twitter</iconclass>
+		</link>
+		<link>
+			<name>Twitter (Personal)</name>
+			<url>https://twitter.com/joshuah552</url>
+			<iconclass>fa fa-twitter</iconclass>
+		</link>
+		<link>
+			<name>I want this depiction template</name>
+			<url>https://github.com/supermamon/Reposi3/</url>
+			<iconclass>fa fa-thumbs-up</iconclass>
+		</link>
+	</footerlinks>
+</repo>
