@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>TextClock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript" charset="utf-8" src="config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/moment.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="widget">
+<div class="text"
+  <div id="time"></div>
+        <div id="date"></div>
+
+    </div>
+
+
+</body>
+
+<script>
+
+document.getElementById("time").innerHTML = "It's " + moment().format('h:mm a');
+document.getElementById("date").innerHTML = "on " + moment().format('dddd, MMMM Do');
+
+document.getElementById("time").style.textAlign = Align;
+document.getElementById("date").style.textAlign = Align;
+
+document.getElementById("time").style.color = TextColor;
+document.getElementById("date").style.color = TextColor;
+
+
+
+</script>

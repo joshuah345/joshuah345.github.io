@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+   <array>
+      <dict>
+         <key>default</key>
+         <string>Show</string>
+         <key>label</key>
+         <string>When no music is playing</string>
+         <key>name</key>
+         <string>isSet</string>
+         <key>options</key>
+         <dict>
+            <key>Show</key>
+            <string>block</string>
+            <key>Hide</key>
+            <string>none</string>
+         </dict>
+         <key>type</key>
+         <string>select</string>
+      </dict>
+   </array>
+</plist>

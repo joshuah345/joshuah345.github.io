@@ -1,0 +1,228 @@
+<html>
+
+<head>
+	<title>Sonata Vertical</title>
+	<!-- requires XenInfo to work -->
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		@font-face {
+			font-family: csar;
+			src: url("stuff/csarr.ttf") 
+		}
+
+		@font-face {
+			font-family: csarl;
+			src: url("stuff/csarl.ttf")
+		}
+
+		#bg {
+			display:block;
+			position: absolute;
+			filter: blur(5px) brightness(80%);
+			background: url("blank.jpg") cover center no-repeat ;
+			background-position: 50% 50%;
+			background-color: #0f0f0f;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transform: scale(1.08)
+		}
+
+		#outerbg {
+			width: 225px;
+			height: 300px;
+			border-radius: 15px;
+			overflow: hidden;
+		}
+
+		.container {
+			width: 225px;
+			height: 300px;
+		}
+
+		.base {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 225px;
+			height: 300px;
+		}
+
+		.base div {
+			position: absolute;
+		}
+
+		#title {
+			white-space: nowrap;
+			color: #ffffff;
+			top: 160px;
+			left: 15%;
+			width: 160px;
+			font-size: 14px;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			font-family: csar;
+			text-align: center;
+		}
+
+		#album {
+			top: 210px;
+			left: 15%;
+			width: 160px;
+			font-size: 12px;
+			font-weight: 100;
+			color: #ffffff;
+			font-family: csarl;
+			text-align: center;
+		}
+
+		#album::before {
+			content: "from: ";
+		}
+
+		#artist {
+			top: 185px;
+			left: 15%;
+			font-size: 12px;
+			font-weight: 100;
+			color: #ffffff;
+			width: 160px;
+			overflow: scroll;
+			font-family: csarl;
+			text-align: center;
+		}
+
+		#artist::before {
+			content: "by: ";
+			font-weight: 50;
+		}
+
+		#controls {
+			margin-left: -48px;
+			margin-top: 15px;
+		}
+
+		#prev {
+			position: absolute;
+			top: 250px;
+			left: 50px;
+			filter: invert(100%);
+			
+		}
+
+		#play {
+			position: absolute;
+			top: 250px;
+			left: 105px;
+			filter: invert(100%);
+			align-content: center
+		}
+
+		#next {
+			position: absolute;
+			top: 250px;
+			left: 160px;
+			filter: invert(100%);
+		}
+
+		#artwork {
+			top: 25px;
+			left: 50px;
+			width: 125px;
+			height: 125px;
+			border-radius: 4px;
+			box-shadow: 2px 1px 2px 1px #2c2a2ac9;
+			background-size: cover;
+			background-image: url('blank.jpg');
+			object-fit: cover;
+		}
+	</style>
+</head>
+
+<body>
+		
+	<div class="container">
+		
+		<div class="base">
+				<div id="outerbg">
+				<div id="bg"></div>
+			</div>
+			<div id="artwork"></div>
+			<div id="title">No Song Playing</div>
+			<div id="artist">artist</div>
+			<div id="album">album</div>		
+		</div>
+
+		<div id="controls">
+			<img id="play" src="stuff/play.svg" width=20 />
+			<img id="next" src="stuff/end.svg" width="20" />
+			<img id="prev" src="stuff/start.svg" width="20" />
+		</div>
+	</div>
+
+
+
+	<script>
+		var doc = document,
+			media = {
+				play: function () {
+					window.location = 'xeninfo:playpause';
+				},
+				next: function () {
+					window.location = 'xeninfo:nexttrack';
+				},
+				prev: function () {
+					window.location = 'xeninfo:prevtrack';
+				}
+			},
+			artDiv = doc.getElementById('artwork'),
+			titleDiv = doc.getElementById('title'),
+			artistDiv = doc.getElementById('artist'),
+			albumDiv = doc.getElementById('album'),
+			playDiv = doc.getElementById('play'),
+			playerbg = doc.getElementById('bg');
+
+
+		function mainUpdate(type) {
+			var artworkPreload;
+			if (type == 'music') {
+				if (isplaying) {
+					playDiv.src = 'stuff/pause.svg';
+					artistDiv.innerHTML = artist;
+					titleDiv.innerHTML = title;
+					albumDiv.innerHTML = album;
+					artworkPreload = new Image();
+					artworkPreload.onload = function () {
+						artDiv.style.backgroundImage = "url(" + this.src + ")";
+						playerbg.style.backgroundImage = "url(" + this.src + ")";
+
+					};
+					artworkPreload.src = "file:///var/mobile/Documents/Artwork.jpg?" + (new Date()).getTime();
+				} else {
+					playDiv.src = 'stuff/play.svg';
+					artistDiv.innerHTML = "....";
+					titleDiv.innerHTML = "Nothing is playing.";
+					artDiv.style.backgroundImage = "url('blank.jpg')";
+					playerbg.style.backgroundImage = "url('blank.jpg')";
+
+				}
+			}
+		}
+
+		doc.getElementById('controls').addEventListener('touchstart', function (el) {
+			media[el.target.id]();
+		});
+
+		artDiv.addEventListener('touchstart', function () {
+			window.location = 'xeninfo:openapp:' + musicApp;
+
+
+		});
+	</script>
+</body>
+
+</html>

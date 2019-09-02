@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+ <html lang="en" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <title>BetterSBBox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script type="text/javascript" charset="utf-8" src="./Config.js"></script>
+</head>
+
+<body>
+  <div id="frame"></div>
+<div id="border"></div>
+</body>
+<script>
+  document.querySelector("#frame").style.height = BoxHeight + "vw";
+  document.querySelector("#frame").style.width = BoxWidth + "vw";
+
+  document.querySelector("#frame").style.backgroundColor = BGColor;
+  document.querySelector("#frame").style.backdropFilter = `blur(${BlurAmount}px)`;
+  document.querySelector("#frame").style.webkitBackdropFilter = `blur(${BlurAmount}px)`;
+  document.querySelector("#frame").style.borderRadius = BorderRadius + "px";
+
+  document.querySelector("#border").style.borderColor = BorderColor;
+  document.querySelector("#border").style.borderStyle = BorderStyle;
+  document.querySelector("#border").style.borderRadius = BorderRadius + "px";
+
+  document.querySelector("#border").style.height = BoxHeight + "vw";
+  document.querySelector("#border").style.width = BoxWidth + "vw";
+
+
+
+</script>
+
+</html>

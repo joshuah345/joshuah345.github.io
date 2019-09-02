@@ -1,0 +1,63 @@
+body {
+	margin:0;
+	padding:0;
+	text-shadow:1px 1px 0px rgba(0,0,0, 0.2);
+	font-weight:100;
+  	text-transform:uppercase;
+	font-family:panton;
+	color:#f3f3f3;
+	letter-spacing:1;
+}
+
+@font-face{
+	font-family:creta;
+	src:url(Stuff/Creta.ttf);
+}
+@font-face{
+	font-family:kon;
+	src:url(Stuff/Kontanter-Bold.otf);
+}
+@font-face{
+	font-family:panton;
+	src:url(Stuff/Panton-LightCaps.otf);
+}
+@font-face{
+	font-family:lovelo;
+	src:url(Stuff/LoveloBlack.otf);
+}
+
+#Widget{
+	position:absolute; top:0px; left:0px; width:375px; height:667px;
+	font-size:375px; background-color:none;
+}
+
+#weatherIcon{
+	position:absolute; top:36%; left:42%; width:16%; z-index:0;
+	-webkit-filter:invert(3%) drop-shadow(1px 1px 0px rgba(0,0,0, 0.2));
+}
+
+#Clock{
+    position:absolute; top:39.5%; left:-14.5%; width:100%; text-align:center; z-index:50;
+    font-size:4%; 
+}
+#temp{
+    position:absolute; top:39.5%; left:14.5%; width:100%; text-align:center; z-index:50;
+    font-size:4%; 
+}
+
+#month{
+    position:absolute; top:28%; left:0%; width:100%; text-align:center; z-index:50;
+    font-size:12%; font-family:kon;
+}
+
+#date{
+    position:absolute; top:22%; left:0%; width:100%; text-align:center; z-index:30;
+    font-size:10%; font-family:lovelo;
+}
+
+
+#weekday{
+    position:absolute; top:30%; left:0%; width:100%; text-align:center; z-index:50;
+    font-size:11%; font-family:creta; text-transform:capitalize;
+    color:#D6425D; opacity:0.9;
+}

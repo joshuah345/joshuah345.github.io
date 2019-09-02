@@ -1,0 +1,39 @@
+<!-- HTML by Cory L (https://codepen.io/TheVVaFFle/pen/NMjGWN) - Modified by Daniell -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <link href="css/fontawesome/css/all.css" rel="stylesheet">
+</head>
+<div id="container">
+  <div id="notification">
+    <div id="info">
+      <div class="service">
+      </div>
+      <div id="specifics">
+        <h1 class="song"></h1>
+        <h1 class="artist"></h1>
+      </div>
+      <div id="controls">
+        <i class="fas fa-step-backward" onclick="Previous()"></i>
+        <i id="PlayPause" class="fas fa-play" onclick="PlayPause()"></i>
+        <i class="fas fa-step-forward" onclick="Next()"></i>
+      </div>
+    </div>
+    <div id="image">
+      <img src="https://i.imgur.com/ws1BuQB.png" class="cover" crossOrigin="anonymous" id="artworkImage">
+    </div>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/tinycolor-min.js"></script>
+  <script src="js/rgbaster.min.js"></script>
+  <script src="js/Vibrant.min.js"></script>
+  <script src="js/functions.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,9 @@
+Package: com.zenith.sbbox
+Name: BetterSBBox
+Version: 1.2
+Architecture: iphoneos-arm
+Description: A more customizable version of SB Box
+Maintainer: Superuser (Zenith) <joshuah345@gmail.com>
+Author: Superuser (Zenith) <joshuah345@gmail.com>
+Section: Widgets
+Depends: com.matchstic.xenhtml

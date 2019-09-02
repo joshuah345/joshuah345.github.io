@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>mnmlplayer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript" charset="utf-8" src="config.js"></script>
+</head>
+
+<body>
+    <div class="Widget">
+        <div class="container">
+            <div class="text">
+                <div id="title">Title</div>
+                <br>
+                <div id="artist">Artist</div>
+            </div>
+            <div class="buttons">
+                <img id="prev" src="img/rw.png" width="30" />
+                <img id="play" src="img/play.png" width="30" />
+                <img id="next" src="img/ff.png" width="30" />
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    var doc = document,
+        media = {
+            play: function () {
+                window.location = 'xeninfo:playpause';
+            },
+            next: function () {
+                window.location = 'xeninfo:nexttrack';
+            },
+            prev: function () {
+                window.location = 'xeninfo:prevtrack';
+            }
+        },
+        titleDiv = doc.getElementById('title'),
+        artistDiv = doc.getElementById('artist'),
+        playDiv = doc.getElementById('play');
+
+    function mainUpdate(type) {
+        var artworkPreload;
+        if (type == 'music') {
+            if (isplaying) {
+                playDiv.src = 'img/pause.png';
+                artistDiv.innerHTML = artist;
+                titleDiv.innerHTML = title;
+                artworkPreload = new Image();
+                artworkPreload.onload = function () {
+                    artDiv.style.backgroundImage = "url(" + this.src + ")";
+                };
+                artworkPreload.src = "file:///var/mobile/Documents/Artwork.jpg?" + (new Date()).getTime();
+            } else {
+                playDiv.src = 'img/play.png';
+                artistDiv.innerHTML = "";
+                titleDiv.innerHTML = "Nothing is playing...";
+
+            }
+        }
+    }
+    doc.querySelector('.buttons').addEventListener('touchstart', function (el) {
+        media[el.target.id]();
+    })
+</script>
+
+<script>
+    document.querySelector(".container").style.backdropFilter = `blur(${BlurAmount}px)`;
+    document.querySelector(".container").style.webkitBackdropFilter = `blur(${BlurAmount}px)`;
+
+    document.querySelector(".container").style.borderColor = BorderColor;
+
+
+    document.querySelector(".text").style.color = FGColor;
+
+    if (BorderEnabled == "true") {
+        document.querySelector(".container").style.borderStyle = BorderStyle;
+
+    } else {
+        document.querySelector(".container").style.borderStyle = "none";
+
+    }
+
+    if (BGEnabled == "true") {
+        document.querySelector(".container").style.backgroundColor = BGColor;
+
+    } else {
+        document.querySelector(".container").style.backgroundColor = "rgba(0,0,0,0)";
+    }
+</script>
+
+
+
+
+
+
+
+
+
+</html>

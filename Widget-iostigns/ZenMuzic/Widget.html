@@ -1,0 +1,157 @@
+<html>
+
+<head>
+	<title>Music Player</title>
+	<!-- MusicPlayer requires XenInfo to work -->
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: Circular Sp UI v3 T;
+		}
+
+		.container {
+			width: 320px;
+			height: 90px;
+		}
+
+		.base {
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			width: 315px;
+			height: 80px;
+			border-radius: 0px;
+			background-color: #1c1c1c;
+			box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+		}
+
+		.base div {
+			position: absolute;
+		}
+
+		#title {
+			white-space: nowrap;
+			color: #EEEEEE;
+			top: 10px;
+			left: 80px;
+			width: 230px;
+			font-size: 11px;
+			overflow: scroll;
+		}
+
+		#artist {
+			top: 28px;
+			left: 80px;
+			font-weight: 100;
+			color: #adadad;
+			width: 230px;
+			font-size: 10px;
+			overflow: scroll;
+		}
+
+		#controls {
+			margin-left: 0px;
+			margin-top: 30px;
+		}
+
+		#play {
+			position: absolute;
+			top: 20px;
+			left: 255px;
+			filter: invert(1);
+		}
+
+		#next {
+			position: absolute;
+			top: 20px;
+			left: 285px;
+			filter: invert(1);
+		}
+
+		#prev {
+			position: absolute;
+			top: 20px;
+			left: 225px;
+			filter: invert(1);
+		}
+
+		#art {
+			top: 10px;
+			left: 10px;
+			width: 60px;
+			height: 60px;
+			border-radius: 0px;
+			background-size: cover;
+			background-image: url('img/blank.png');
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="base">
+			<div id="art"></div>
+			<div id="title">No Title</div>
+			<div id="artist">No Artist</div>
+			<div id="controls">
+				<img id="play" src="img/play.png" width="20" />
+				<img id="next" src="img/next.png" width="20" />
+				<img id="prev" src="img/prev.png" width="20" />
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var doc = document,
+			media = {
+				play: function () {
+					window.location = 'xeninfo:playpause';
+				},
+				next: function () {
+					window.location = 'xeninfo:nexttrack';
+				},
+				prev: function () {
+					window.location = 'xeninfo:prevtrack';
+				}
+			},
+			artDiv = doc.getElementById('art'),
+			titleDiv = doc.getElementById('title'),
+			artistDiv = doc.getElementById('artist'),
+			playDiv = doc.getElementById('play');
+
+		function mainUpdate(type) {
+			var artworkPreload;
+			if (type == 'music') {
+				if (isplaying) {
+					playDiv.src = 'img/pause.png';
+					artistDiv.innerHTML = artist;
+					titleDiv.innerHTML = title;
+					artworkPreload = new Image();
+					artworkPreload.onload = function () {
+						artDiv.style.backgroundImage = "url(" + this.src + ")";
+					};
+
+					artworkPreload.src = "file:///var/mobile/Documents/Artwork.jpg?" + (new Date()).getTime();
+				} else {
+					playDiv.src = 'img/play.png';
+					artistDiv.innerHTML = "";
+					titleDiv.innerHTML = "Nothing is playing...";
+					artDiv.style.backgroundImage = "url('ArtworkDefault.jpg')";
+				}
+			}
+		}
+
+		doc.getElementById('controls').addEventListener('touchstart', function (el) {
+			media[el.target.id]();
+		});
+
+		artDiv.addEventListener('touchstart', function () {
+			window.location = 'xeninfo:openapp:' + musicApp;
+		});
+
+		
+	</script>
+</body>
+
+</html>
