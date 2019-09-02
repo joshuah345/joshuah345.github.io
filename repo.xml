@@ -8,12 +8,11 @@
 		<link>
 			<name>Twitter (Personal)</name>
 			<url>https://twitter.com/joshuah552</url>
-			<iconclass>fa fa-twitter</iconclass>
+			<iconclass>fa fa-twitter-square</iconclass>
 		</link>
 		<link>
-			<name>I want this depiction template</name>
-			<url>https://github.com/supermamon/Reposi3/</url>
-			<iconclass>fa fa-thumbs-up</iconclass>
+			<name>Superuser#1958</name>
+			<iconclass>fa fa-discord</iconclass>
 		</link>
 	</footerlinks>
 </repo>
