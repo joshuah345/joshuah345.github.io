@@ -1,0 +1,31 @@
+Package: com.zenith.sbbox
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: Superuser (Zenith) <joshuah345@gmail.com>
+Depends: com.matchstic.xenhtml
+Filename: ./debs/com.zenith.sbbox.deb
+Size: 1852
+MD5sum: 71a7ca34026bb405991d02c703b46b82
+SHA1: fe8cff4685c7525a0a83a6dcd3fd6f5c1bd09db9
+SHA256: e818fe88a34ef6ce259423da7b97256ef70f416c916aaab99ddc6527102f4c13
+Section: Widgets
+Description: A more customizable version of SB Box
+Author: Superuser (Zenith) <joshuah345@gmail.com>
+Depiction: https://superuser.ml/depictions/?p=com.zenith.sbbox
+Name: BetterSBBox
+
+Package: com.zenith.zenmusic
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Superuser (Zenith) <joshuah345@gmail.com>
+Depends: com.matchstic.xenhtml, com.junesiphone.xeninfo
+Filename: ./debs/com.zenith.zenmusic.deb
+Size: 9656
+MD5sum: 4961dc5a495529b2da4efb8ccaf1d5a0
+SHA1: 33f269b7aad991c71c55edaa25f40c8f7f1acd9d
+SHA256: ed57ff1fc6553d2ada6e0d9ff0dfa09ee8d5cb85786b17e5fd29fb37b4da00d6
+Section: Widgets
+Description: A modified version of Junesiphone's XenMusic to be square and slightly more customizable
+Author: Superuser (Zenith) <joshuah345@gmail.com>
+Depiction: https://superuser.ml/depictions/?p=com.zenith.zenmusic
+Name: ZenMusic
