@@ -16,10 +16,12 @@
     <descriptionlist>
         <description>Much more customizable version of SB Box on Packix</description>
     </descriptionlist>
-    
+
     <screenshots></screenshots>
+
     <changelog>
         <change>Initial release</change>
     </changelog>
+    
     <links></links>
 </package>
