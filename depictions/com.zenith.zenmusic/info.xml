@@ -1,7 +1,7 @@
 <package>
-    <id>com.zenith.sbbox</id>
-    <name>BetterSBBox</name>
-    <version>1.2</version>
+    <id>com.zenith.zenmusic</id>
+    <name>ZenMusic</name>
+    <version>1.0</version>
 
     <compatibility>
         <firmware>
