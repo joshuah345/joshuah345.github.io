@@ -14,27 +14,16 @@
     </dependencies>
 
     <descriptionlist>
-        <description>Much more customizable version of SB Box on Packix</description>
+        <description> modified version
+         of Junesiphone's
+          XenMusic to be square and slightly more customizable</description>
     </descriptionlist>
 
-    <screenshots>
-
-        <screenshot>
-            <image>1.jpg</image>
-        </screenshot>
-
-        <screenshot>
-            <image>2.jpg</image>
-        </screenshot>
-
-        <screenshot>
-            <image>3.jpg</image>
-        </screenshot>
-    </screenshots>
+    <screenshots></screenshots>
 
     <changelog>
         <change>Initial release</change>
     </changelog>
-
+    
     <links></links>
 </package>
