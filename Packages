@@ -15,17 +15,17 @@ Depiction: https://superuser.ml/depictions/?p=com.zenith.sbbox
 Name: BetterSBBox
 
 Package: com.zenith.zenmusic
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Maintainer: Superuser (Zenith) <joshuah345@gmail.com>
 Depends: com.matchstic.xenhtml, com.junesiphone.xeninfo
 Filename: ./debs/com.zenith.zenmusic.deb
-Size: 9656
-MD5sum: 4961dc5a495529b2da4efb8ccaf1d5a0
-SHA1: 33f269b7aad991c71c55edaa25f40c8f7f1acd9d
-SHA256: ed57ff1fc6553d2ada6e0d9ff0dfa09ee8d5cb85786b17e5fd29fb37b4da00d6
+Size: 9720
+MD5sum: f3304c4f2c142aaf2c8c296506889180
+SHA1: fab2ddb26fecf78dbdac751af7507488e9770eb4
+SHA256: 609764266659fc859b8442d08c14b5442f52674f848d085abcbe3a61dbfd93f5
 Section: Widgets
 Description: A modified version of Junesiphone's XenMusic to be square and slightly more customizable
 Author: Superuser (Zenith) <joshuah345@gmail.com>
 Depiction: https://superuser.ml/depictions/?p=com.zenith.zenmusic
-Name: ZenMusic
+
