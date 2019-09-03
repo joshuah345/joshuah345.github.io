@@ -20,12 +20,13 @@ Architecture: iphoneos-arm
 Maintainer: Superuser (Zenith) <joshuah345@gmail.com>
 Depends: com.matchstic.xenhtml, com.junesiphone.xeninfo
 Filename: ./debs/com.zenith.zenmusic.deb
-Size: 9720
-MD5sum: f3304c4f2c142aaf2c8c296506889180
-SHA1: fab2ddb26fecf78dbdac751af7507488e9770eb4
-SHA256: 609764266659fc859b8442d08c14b5442f52674f848d085abcbe3a61dbfd93f5
+Size: 9728
+MD5sum: 155e2d8e9abcf895d753ad809d1ee04c
+SHA1: 094699fd9e1c132439345ff11730f69d50da0a88
+SHA256: 4912d86b3eb234d6d4fb7e1d8b0ddede9c72f6686eedc60c612d170524e00811
 Section: Widgets
 Description: A modified version of Junesiphone's XenMusic to be square and slightly more customizable
 Author: Superuser (Zenith) <joshuah345@gmail.com>
 Depiction: https://superuser.ml/depictions/?p=com.zenith.zenmusic
+Name: ZenMusic
 
