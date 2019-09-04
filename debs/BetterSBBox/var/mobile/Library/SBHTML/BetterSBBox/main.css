@@ -1,0 +1,25 @@
+
+
+body, html {
+    margin: 0;
+}
+
+#frame {
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    -webkit-backdrop-filter: "";
+    backdrop-filter: "";
+    background-color:"";
+    border-width: "";
+    border-color: "";
+    border-radius: "" ; 
+    height: 40px;
+    width: 40px;
+}
+
+#border {
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+}
