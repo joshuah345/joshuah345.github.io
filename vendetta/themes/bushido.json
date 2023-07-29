@@ -1,0 +1,128 @@
+{
+    "name": "bushido",
+    "description": "Theme based on GMK Bushido keycaps.",
+    "authors": [
+        {
+            "name": "Superuser",
+            "id": "419610859392860162"
+        }
+    ],
+    "semanticColors": {
+        "KEYBOARD": [
+            "#A52833",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_PRIMARY": [
+            "#282A30",
+            "#ffffff"
+        ],
+        "BACKGROUND_SECONDARY": [
+            "#282A30",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_SECONDARY_ALT": [
+            "#41444d",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_TERTIARY": [
+            "#35373e",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_ACCENT": [
+            "#D13744",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_FLOATING": [
+            "#282A30",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_NESTED_FLOATING": [
+            "#282A30",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_MOBILE_PRIMARY": [
+            "#282A30",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_MOBILE_SECONDARY": [
+            "#282A30",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_MODIFIER_HOVER": [
+            "#801f27",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_MODIFIER_ACTIVE": [
+            "#D13744",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_MODIFIER_SELECTED": [
+            "#24262B",
+            "#FFFFFF"
+        ],
+        "BACKGROUND_MODIFIER_ACCENT": [
+            "#282A30",
+            "#FFFFFF"
+        ],
+        "CHANNELTEXTAREA_BACKGROUND": [
+            "#30243d",
+            "#FFFFFF"
+        ],
+        "CHANNELS_DEFAULT": [
+            "#A52833",
+            "#FFFFFF"
+        ],
+        "HEADER_PRIMARY": [
+            "#F6F0E9",
+            "#FFFFFF"
+        ],
+        "HEADER_SECONDARY": [
+            "#5a5e6b",
+            "#FFFFFF"
+        ],
+        "INTERACTIVE_ACTIVE": [
+            "#F6F0E9",
+            "#FFFFFF"
+        ],
+        "INTERACTIVE_MUTED": [
+            "#801f27",
+            "#FFFFFF"
+        ],
+        "INTERACTIVE_NORMAL": [
+            "#D13744",
+            "#FFFFFF"
+        ],
+        "TEXT_NORMAL": [
+            "#F6F0E9",
+            "#FFFFFF"
+        ],
+        "TEXT_MUTED": [
+            "#6d7181",
+            "#dfdfdf"
+        ],
+        "TEXT_LINK": [
+            "#A52833",
+            "#2d53b4"
+        ],
+        "CHAT_BACKGROUND": [
+            "#282A30",
+            "#ffffff"
+        ]
+    },
+    "rawColors": {
+        "PRIMARY_500": "#D13744",
+        "PRIMARY_100": "#A52833",
+        "PRIMARY_200": "#A52833",
+        "PRIMARY_300": "#5a5e6b",
+        "PRIMARY_360": "#41444d",
+        "PRIMARY_400": "#A52833",
+        "PRIMARY_600": "#35373e",
+        "PRIMARY_630": "#36393f",
+        "PRIMARY_700": "#801f27",
+        "PRIMARY_800": "#801f27",
+        "PRIMARY_900": "#A52833",
+        "WHITE_500": "#F6F0E9",
+        "BRAND_500": "#D13744"
+    },
+    "spec": 2
+}
