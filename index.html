@@ -3,19 +3,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="icon" type="image/x-icon" href="/assets/tanuki-circle.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" type="image/x-icon" href="assets/tanuki-circle.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <script src="js/svginject.min.js"></script>
+    <script rel="preload" src="js/anime.min.js"></script>
+    <script rel="preload" src="js/anim.js"
+<!--     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script> -->
+    <script src="https://kit.fontawesome.com/4bcac840c6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="main-container">
+      <div onload="animateRipple()" id="shimmer-overlay" style="height: 100%; width: 100%; position:absolute;"></div>
+    <script src="js/main.js"></script>
+    <header>
         <div id="header-container">
-       <a href="/" id="home-icon"><img onload="SVGInject(this)" src="/assets/icons/wink-right.svg" id="home-icon-svg"></a>
-    </div>
-        <img id="mainbg" src="assets/shinto-forest.jpg"></img>
-    
-    </div>
+            <a href="/" id="home-icon"><img onload="SVGInject(this)" src="assets/icons/nuki-wink.svg"
+                    id="home-icon-svg"></a>
+        </div>
+    </header>
+    <main id="main-container">
+        <img id="mainbg" src="/assets/shinto-forest.jpg"></img>
+        <div id="particles-js"></div>
+       <span>made with <i class="fa-regular fa-heart"></i> in NYC</span>
+    </main>
+    <footer></footer>
 </body>
+
 </html>
