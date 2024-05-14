@@ -6,7 +6,6 @@ function currentPage(uri) {
     }
 }
 
-
 function ghRedirect() {
     if (currentPage().toLowerCase().includes("/gh/")) {
         const trimURL = window.location.pathname.replace("/gh/","joshuah345/")
@@ -17,4 +16,5 @@ function ghRedirect() {
         currentPage(window.location.origin)
     }
 }
+
 
