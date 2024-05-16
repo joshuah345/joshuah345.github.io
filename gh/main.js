@@ -6,15 +6,15 @@ function currentPage(uri) {
     }
 }
 
-function ghRedirect() {
-    if (currentPage().toLowerCase().includes("/gh/")) {
-        const trimURL = window.location.pathname.replace("/gh/","joshuah345/")
-        const newURL = ("https://github.com/" + trimURL)
+ function ghRedirect() {
+    if (currentPage().toLowerCase().includes("/gh")) {
+        var trimURL = window.location.pathname.replace("gh","joshuah345")
+        var newURL = ("https://github.com" + trimURL)
         console.log("redirecting to github...")
-        currentPage(newURL)
-    } else {
-        currentPage(window.location.origin)
+     } else {
+        newURL = window.location.origin
     }
-}
+    currentPage(newURL)
+} 
 
 
